@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Xanh Mono", monospace;
+  background-image: url(img/bg.jpg);
+}
+:root {
+  --txtcolor: whitesmoke;
+  --bg-1: black;
+}
+
+.tagline {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--txtcolor);
+}
+.wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  background: var(--txtcolor);
+  width: 520px;
+  padding: 20px;
+}
+
+/* ===================
+Log In Buttons 
+===================*/
+.login-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-btn h2{
+    margin-bottom: 20px;
+}
+.login-btn img {
+  width: 25px;
+}
+.link-btn,
+.git-btn {
+  border: none;
+  width: 250px;
+  padding: 15px 10px;
+  border-radius: 50px;
+  color: var(--txtcolor);
+}
+.link-btn {
+  background: #1da1f2;
+}
+.git-btn {
+  background: black;
+}
+.l-btn {
+  margin-bottom: 15px;
+}
+.l-btn span {
+  margin-left: 5px;
+}
+.l-btn img,
+.l-btn span {
+  vertical-align: middle;
+}
+
+/* ====================
+Form and Input Basics
+=======================*/
+.form {
+  display: grid;
+  place-content: center;
+}
+fieldset {
+  border: none;
+}
+legend {
+  text-align: center;
+  margin-bottom: 10px;
+}
+input {
+  width: 250px;
+  padding: 15px 10px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  border: none;
+}
+/* ============
+Custom Checkbox
+=============== */
+.chk-input{
+    width: 5%;
+    /* margin: 10px 0px; */
+}
+.form .chk-container{
+    display: block;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+.form .chk-container .chk-input{
+    /* position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0; */
+    display: none;
+    /* Hide the browser's default checkbox */
+}
+
+.form .chk-container .checkmark{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    height: 21px;
+    width: 21px;
+    background-color: gray;
+    border-radius: 4px;
+    /* Create a custom checkbox */
+}
+.chk-container:hover input~.checkmark{
+    background-color: crimson;
+    /* On mouse-over, add a grey background color */
+}
+.chk-container input:checked~.checkmark{
+    background:springgreen;
+    /* When the checkbox is checked, add a blue background */
+}
+.chk-container .checkmark::after{
+    content: "";
+  position: absolute;
+  display: none;
+  
+/* Create the checkmark/indicator (hidden when not checked) */
+}
+
+
+.chk-container input:checked ~ .checkmark:after {
+    display: block;
+    /* Show the checkmark when checked */
+  }
+  .chk-container .checkmark:after{
+      position: absolute;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid whitesmoke;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+      /* Style the checkmark/indicator */
+  }
+
+.form .chk-container .remember{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
