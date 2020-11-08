@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +6,7 @@
 }
 body {
     font-size: 18px;
-  font-family: "Xanh Mono", monospace;
+    font-family: 'Source Code Pro', monospace;
   background-image: url(img/bg.jpg);
 }
 :root {
@@ -149,6 +149,8 @@ Custom Checkbox
 }
 .chk-container:hover input~.checkmark{
     background-color: crimson;
+    cursor: pointer;
+
     /* On mouse-over, add a grey background color */
 }
 .chk-container input:checked~.checkmark{
@@ -195,6 +197,9 @@ input[type="button"]{
     letter-spacing: 2px;
     color: whitesmoke;
     background: springgreen;
+    cursor: pointer;
+    border: none;
+    outline: none;
 
 }
 /* Sign Up */
